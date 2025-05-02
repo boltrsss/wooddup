@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LottoChamp Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      max-width: 180px;
+    }
+    .container {
+      max-width: 900px;
+      background: #ffffff;
+      margin: 20px auto;
+      padding: 20px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .top-section img {
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .top-section .text-content {
+      flex: 1;
+      min-width: 280px;
+      text-align: left;
+    }
+    .top-section h2 {
+      color: #2c3e50;
+    }
+    .top-section p {
+      font-size: 16px;
+      color: #333;
+    }
+    .quiz-section {
+      background: #0e3d69;
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .quiz-section h3 {
+      margin-top: 0;
+    }
+    .progress-bar {
+      background: #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 6px;
+      margin: 10px 0 20px;
+    }
+    .progress {
+      background: #e67e22;
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    .answers label {
+      display: block;
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .question {
+      display: none;
+    }
+    .question.active {
+      display: block;
+    }
+    footer p {
+      font-size: 12px;
+      color: #888;
+      margin: 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="top-section">
+    <img src="main-box.png" alt="LottoChamp Illustration">
+    <div class="text-content">
+    <h1><span style="color:#3478F6;text-align=center">Get Your LottoChamp Strategy Today</span></h1>
+    <h3><span style="color:#0e3d69;">How LottoChamp Helps You Beat the Odds with Smarter Lottery Strategies</span></h3>
+      <p>LottoChamp is a proven system used by thousands to increase their odds and improve their number selections in lottery games across the world.</p>
+      <p>It analyzes past draws and trends to help you choose the best combinations. It's easy, fast, and doesn't require any technical knowledge.</p>
+      <p>Complete the quick quiz below to see how LottoChamp can work for you:</p>
+    </div>
+  </div>
+
+  <div class="quiz-section">
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="question active" id="question1">
+      <h3>Question 1: How often do you play the lottery?</h3>
+      <div class="answers">
+        <label><input type="radio" name="q1" onclick="nextQuestion(2, 25)"> Daily</label>
+        <label><input type="radio" name="q1" onclick="nextQuestion(2, 25)"> Weekly</label>
+        <label><input type="radio" name="q1" onclick="nextQuestion(2, 25)"> Occasionally</label>
+        <label><input type="radio" name="q1" onclick="nextQuestion(2, 25)"> Rarely</label>
+      </div>
+    </div>
+
+    <div class="question" id="question2">
+      <h3>Question 2: Which lottery games do you usually play?</h3>
+      <div class="answers">
+        <label><input type="radio" name="q2" onclick="nextQuestion(3, 50)"> Pick 3</label>
+        <label><input type="radio" name="q2" onclick="nextQuestion(3, 50)"> Pick 5</label>
+        <label><input type="radio" name="q2" onclick="nextQuestion(3, 50)"> Pick 6</label>
+        <label><input type="radio" name="q2" onclick="nextQuestion(3, 50)"> Other</label>
+      </div>
+    </div>
+
+    <div class="question" id="question3">
+      <h3>Question 3: Do you use any strategies when choosing numbers?</h3>
+      <div class="answers">
+        <label><input type="radio" name="q3" onclick="nextQuestion(4, 75)"> Yes, I have a system</label>
+        <label><input type="radio" name="q3" onclick="nextQuestion(4, 75)"> Sometimes</label>
+        <label><input type="radio" name="q3" onclick="nextQuestion(4, 75)"> No, random picks</label>
+      </div>
+    </div>
+
+    <div class="question" id="question4">
+      <h3>Question 4: What do you want to achieve with LottoChamp?</h3>
+      <div class="answers">
+        <label><input type="radio" name="q4" onclick="showFinal()"> Increase Winning Chances</label>
+        <label><input type="radio" name="q4" onclick="showFinal()"> Learn Winning Strategies</label>
+        <label><input type="radio" name="q4" onclick="showFinal()"> Understand Patterns</label>
+        <label><input type="radio" name="q4" onclick="showFinal()"> Just Curious</label>
+      </div>
+    </div>
+
+    <div class="question" id="final" style="text-align: center;">
+      <h3>🎉 You're One Step Closer!</h3>
+      <p>Your customized LottoChamp strategy is ready to access.</p>
+      <a href="https://go.wooddup.com/click" style="display:inline-block;margin-top:20px;background:#e67e22;padding:15px 30px;border-radius:5px;color:#fff;text-decoration:none;font-size:18px;">Unlock My Strategy</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>Copyright © 2020-2025 | Contact | Privacy | Terms | DMCA<br>
+  This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+</footer>
+
+<script>
+function nextQuestion(nextId, progress) {
+  const current = document.querySelector('.question.active');
+  if (current) current.classList.remove('active');
+  const next = document.getElementById('question' + nextId);
+  if (next) next.classList.add('active');
+  document.getElementById('progress').style.width = progress + '%';
+}
+
+function showFinal() {
+  const current = document.querySelector('.question.active');
+  if (current) current.classList.remove('active');
+  document.getElementById('final').classList.add('active');
+  document.getElementById('progress').style.width = '100%';
+}
+</script>
+
+</body>
+</html>
