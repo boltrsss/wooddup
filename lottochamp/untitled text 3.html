@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LottoChamp Smart Quiz – Women's Edition</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      background: #d8bfd8;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-height: 60px;
+    }
+    header h1 {
+      color: #fff;
+      margin-top: 10px;
+    }
+    .main-image {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+    .quiz-container {
+      background: #fff;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+      height: 10px;
+      background: #ffe4e1;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress {
+      height: 100%;
+      width: 0%;
+      background: #ff7f50;
+      transition: width 0.3s ease;
+    }
+    .question {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .question.active {
+      display: block;
+    }
+    .question h2 {
+      margin-bottom: 15px;
+    }
+    .options button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .options button:hover {
+      background: #e75480;
+    }
+    footer {
+      background: #d8bfd8;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Find Your Lucky Path with LottoChamp 💖</h1>
+  </header>
+
+  <img class="main-image" src="main-box.png" alt="LottoChamp Product Image" />
+
+  <div class="quiz-container">
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="question active" id="q1">
+      <h2>💖 1. How often do you play the lottery?</h2>
+      <div class="options">
+        <button onclick="nextQuestion(1)">Daily</button>
+        <button onclick="nextQuestion(1)">Weekly</button>
+        <button onclick="nextQuestion(1)">Occasionally</button>
+        <button onclick="nextQuestion(1)">Rarely</button>
+      </div>
+    </div>
+
+    <div class="question" id="q2">
+      <h2>💖 2. Which lottery games do you usually play?</h2>
+      <div class="options">
+        <button onclick="nextQuestion(2)">Powerball</button>
+        <button onclick="nextQuestion(2)">Mega Millions</button>
+        <button onclick="nextQuestion(2)">EuroMillions</button>
+        <button onclick="nextQuestion(2)">Other</button>
+      </div>
+    </div>
+
+    <div class="question" id="q3">
+      <h2>💖 3. Do you use any strategies when selecting numbers?</h2>
+      <div class="options">
+        <button onclick="nextQuestion(3)">Yes, I have a system</button>
+        <button onclick="nextQuestion(3)">Sometimes</button>
+        <button onclick="nextQuestion(3)">No, I choose randomly</button>
+      </div>
+    </div>
+
+    <div class="question" id="q4">
+      <h2>💖 4. What is your main goal with LottoChamp?</h2>
+      <div class="options">
+        <button onclick="showResult()">Increase winning chances</button>
+        <button onclick="showResult()">Learn a proven strategy</button>
+        <button onclick="showResult()">Understand patterns</button>
+        <button onclick="showResult()">Just curious</button>
+      </div>
+    </div>
+
+    <div class="question" id="result">
+      <h2>🎉 Your Custom Strategy is Ready!</h2>
+      <p>We've crafted a lucky lottery strategy just for you.</p>
+      <a href="https://en-lottochampsoftware.com/" style="display: inline-block; margin-top: 20px; padding: 12px 20px; background: #20b2aa; color: #fff; text-decoration: none; border-radius: 5px;">Get Your Strategy</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright © 2019-2025</p>
+    <p>
+      <a href="#">Contact</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a> |
+      <a href="#">DMCA</a>
+    </p>
+    <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+  </footer>
+
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 4;
+
+    function nextQuestion(q) {
+      document.getElementById('q' + q).classList.remove('active');
+      currentQuestion++;
+      document.getElementById('q' + currentQuestion).classList.add('active');
+      updateProgress();
+    }
+
+    function showResult() {
+      document.getElementById('q' + currentQuestion).classList.remove('active');
+      document.getElementById('result').classList.add('active');
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const progress = document.getElementById('progress');
+      const percent = (currentQuestion / totalQuestions) * 100;
+      progress.style.width = percent + '%';
+    }
+  </script>
+
+</body>
+</html>
+
