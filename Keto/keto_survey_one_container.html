@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Keto Plan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      background: #f5a6c6;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-height: 60px;
+    }
+    header h1 {
+      color: #fff;
+      margin-top: 10px;
+    }
+    .main-image {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+    .quiz-container {
+      background: #fff;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .intro-text {
+      text-align: center;
+      font-size: 18px;
+      color: #cc3366;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      height: 10px;
+      background: #ffe4e1;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress {
+      height: 100%;
+      width: 0%;
+      background: #ff7f50;
+      transition: width 0.3s ease;
+    }
+    .question {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .question.active {
+      display: block;
+    }
+    .question h2 {
+      margin-bottom: 15px;
+    }
+    .options button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .options button:hover {
+      background: #e75480;
+    }
+    .final-cta {
+      display: none;
+      text-align: center;
+    }
+    .final-cta h2 {
+      color: #28a745;
+    }
+    .final-cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: #20b2aa;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background: #f5a6c6;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  
+    .main-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+
+  <header>
+    <h1>Find Your Perfect Keto Meal Plan 🍳</h1>
+  </header>
+
+  <img class="main-image" src="1.png" alt="Ultimate Keto Meal Plan" />
+
+  <div class="quiz-container">
+    <p class="intro-text">Answer a few quick questions and we’ll match you with a customized keto meal plan that fits your lifestyle and goals. 🥑</p>
+
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="question active" id="q1">
+      <h2>💖 1. What's your main goal with keto?</h2>
+      <div class="options">
+        <button onclick="nextQuestion(1)">Lose weight</button>
+        <button onclick="nextQuestion(1)">Feel more energetic</button>
+        <button onclick="nextQuestion(1)">Balance hormones</button>
+        <button onclick="nextQuestion(1)">Control cravings</button>
+      </div>
+    </div>
+
+    <div class="question" id="q2">
+      <h2>💖 2. What type of meals do you prefer?</h2>
+      <div class="options">
+        <button onclick="nextQuestion(2)">Quick & Easy</button>
+        <button onclick="nextQuestion(2)">Family-Friendly</button>
+        <button onclick="nextQuestion(2)">Vegetarian Options</button>
+        <button onclick="nextQuestion(2)">Meal Prep Focused</button>
+      </div>
+    </div>
+
+    <div class="question" id="q3">
+      <h2>💖 3. Do you have any food sensitivities?</h2>
+      <div class="options">
+        <button onclick="nextQuestion(3)">Yes – dairy</button>
+        <button onclick="nextQuestion(3)">Yes – gluten</button>
+        <button onclick="nextQuestion(3)">No allergies</button>
+        <button onclick="nextQuestion(3)">Not sure yet</button>
+      </div>
+    </div>
+
+    <div class="question" id="q4">
+      <h2>💖 4. How long are you willing to commit?</h2>
+      <div class="options">
+        <button onclick="showResult()">7 days to try it out</button>
+        <button onclick="showResult()">30 days to see results</button>
+        <button onclick="showResult()">90 days to transform</button>
+        <button onclick="showResult()">As long as it takes</button>
+      </div>
+    </div>
+
+    <div class="final-cta" id="result">
+      <h2>🎉 Your Keto Plan is Ready!</h2>
+      <p>We’ve tailored a keto strategy just for you based on your answers.</p>
+      <a href="https://www.digistore24.com/redir/377631/YourAffiliateID/" target="_blank">Get My Custom Keto Plan</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright © 2019-2025</p>
+    <p>
+      <a href="#">Contact</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a> |
+      <a href="#">DMCA</a>
+    </p>
+    <p>This site is not a part of Facebook or Google. It is not endorsed by Facebook Inc. or Google LLC.</p>
+  </footer>
+
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 4;
+
+    function nextQuestion(q) {
+      document.getElementById('q' + q).classList.remove('active');
+      currentQuestion++;
+      document.getElementById('q' + currentQuestion).classList.add('active');
+      updateProgress();
+    }
+
+    function showResult() {
+      document.getElementById('q' + currentQuestion).classList.remove('active');
+      document.getElementById('result').style.display = 'block';
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const progress = document.getElementById('progress');
+      const percent = (currentQuestion / totalQuestions) * 100;
+      progress.style.width = percent + '%';
+    }
+  </script>
+
+</div>
+</body>
+</html>
