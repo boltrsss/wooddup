@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEPTIFIX - Septic Survey</title>
+  <style>
+    body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; background-color: #f4f7f9; color: #1a1a1a; }
+    header, footer { background-color: #16824d; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 25px 20px; border-radius: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.1); }
+    .intro-section { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 30px; }
+    .main-image { width: 100%; max-width: 400px; border-radius: 14px; flex: 1 1 300px; }
+    .intro-text { flex: 1 1 300px; font-size: 16px; color: #000; line-height: 1.6; }
+    .progress-container { width: 100%; background-color: #ccc; border-radius: 20px; overflow: hidden; height: 10px; margin-bottom: 30px; }
+    .progress-bar { width: 0%; height: 100%; background-color: #03a9f4; transition: width 0.3s ease; }
+    h2.question-title { font-size: 30px; margin: 20px 0 15px; color: #03a9f4; text-align: center; }
+    .button-group { display: flex; flex-direction: column; gap: 12px; }
+    .button-option {
+      background-color: #16824d; color: white; padding: 14px; border-radius: 8px; text-align: center;
+      cursor: pointer; font-weight: bold; transition: background-color 0.2s ease;
+      border: none;
+    }
+    .button-option:hover { background-color: #126b3f; }
+    .agree-button {
+      background-color: #03a9f4;
+      color: white;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      margin-top: 20px;
+      transition: background-color 0.2s ease;
+    }
+    .agree-button:hover { background-color: #218838; }
+    .question-block { display: none; }
+    .question-block.active { display: block; }
+    .final-message { font-size: 16px; color: #333; padding: 10px; line-height: 1.6; }
+    footer p { font-size: 12px; line-height: 1.6; color: #fff; padding: 0 15px; }
+    footer a { color: #fff; text-decoration: underline; margin: 0 5px; }
+  </style>
+  
+  
+  <!-- Pinterest Tag -->
+<script>
+!function(e){if(!window.pintrk){window.pintrk = function () {
+window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+  n=window.pintrk;n.queue=[],n.version="3.0";var
+  t=document.createElement("script");t.async=!0,t.src=e;var
+  r=document.getElementsByTagName("script")[0];
+  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+pintrk('load', '2612654090648', {em: '<user_email_address>'});
+pintrk('page');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt=""
+  src="https://ct.pinterest.com/v3/?event=init&tid=2612654090648&pd[em]=<hashed_email_address>&noscript=1" />
+</noscript>
+<!-- end Pinterest Tag -->
+  
+  
+  
+</head>
+<body>
+  <header>
+    <h1>Odd Flushing Trick Fixes All Septic Tank Issues</h1>
+  </header>
+
+  <div class="container">
+    <div class="intro-section">
+      <img class="main-image" src="main.jpg" alt="Septifix Product" />
+      <div class="intro-text">
+        A team of 14 scientists from a prestigious university in US are behind a flushing trick that breaks down and eliminates all organic sludge from septic tanks, including natural oils, grease and organic hydrocarbons, and prevents back-ups, clogs, including corrosion.<br><br>
+        <strong>Plus it eliminates all smells in just 3 days!</strong><br><br>
+        Over <strong>21,374 septic tank owners</strong> have been using this trick and they are now saving close to $500 a year because they don't need to have their septic tank pumped anymore.<br><br>
+        <em>And before we'll reveal this newly discovered flushing trick, please answer the simple questions below to see if it can work for your septic tank as well!</em>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <form id="surveyForm">
+      <div class="question-block active" data-step="1">
+        <h2 class="question-title">Do you use bleach products in your house?</h2>
+        <div class="button-group">
+          <button type="button" class="button-option">Yes</button>
+          <button type="button" class="button-option">No</button>
+        </div>
+      </div>
+
+      <div class="question-block" data-step="2">
+        <h2 class="question-title">When did you have your septic tank pumped the last time?</h2>
+        <div class="button-group">
+          <button type="button" class="button-option">This year</button>
+          <button type="button" class="button-option">1–3 years ago</button>
+          <button type="button" class="button-option">Never</button>
+        </div>
+      </div>
+
+      <div class="question-block" data-step="3">
+        <h2 class="question-title">How many people are living in your house?</h2>
+        <div class="button-group">
+          <button type="button" class="button-option">1–3</button>
+          <button type="button" class="button-option">4–6</button>
+          <button type="button" class="button-option">7 or more</button>
+        </div>
+      </div>
+
+      <div class="question-block" data-step="4">
+        <h2 class="question-title">Have you ever used a septic tank treatment?</h2>
+        <div class="button-group">
+          <button type="button" class="button-option">Yes</button>
+          <button type="button" class="button-option">No</button>
+        </div>
+      </div>
+
+      <div class="question-block" data-step="5">
+        <h2 class="question-title">🎉 Congratulations!</h2>
+        <div class="final-message">
+          Before you head to the next page where you'll learn the <strong>Flushing Trick That Solves All Your Septic Tank Issues</strong>, we simply ask that each person agrees to the following guidelines:<br><br>
+          1. This info is <strong>ONLY</strong> for those who own a septic tank system and want to prevent possible problems at their septic system!<br><br>
+          2. If there are over 7 people living in your house, be sure to do the flushing trick <strong>3 times in your first month!</strong><br><br>
+          3. This info is only being available for a short time frame. If you can't follow the rules above, please <strong>CLOSE THIS WINDOW IMMEDIATELY</strong> to free up your slot for the next person in line.<br><br>
+          If you agree to all of the above, click the <strong>"I Agree"</strong> button below NOW, to proceed to the next page!
+        </div>
+        <br>
+        <button type="button" class="agree-button" onclick="window.location.href='https://go.wooddup.com/click';">I Agree</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>
+      Copyright &copy; 2019-2025<br />
+      <a href="#">Contact</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a> |
+      <a href="#">DMCA</a><br /><br />
+      This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.<br />
+      This site is not affiliated with Pinterest in any way.
+    </p>
+  </footer>
+
+  <script>
+    const steps = document.querySelectorAll('.question-block');
+    const progressBar = document.getElementById('progressBar');
+    let currentStep = 0;
+
+    function showStep(step) {
+      steps.forEach((el, index) => {
+        el.classList.remove('active');
+        if (index === step) el.classList.add('active');
+      });
+      progressBar.style.width = ((step + 1) / steps.length) * 100 + '%';
+    }
+
+    document.querySelectorAll('.button-option').forEach(button => {
+      button.addEventListener('click', () => {
+        currentStep++;
+        if (currentStep < steps.length) {
+          showStep(currentStep);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
