@@ -1,0 +1,440 @@
+@charset "UTF-8";
+/*---------------------------------------- UNIVERSAL STYLES ----------------------------------------*/
+@import url('in_css_09ec20b0f8851f144f7ac558fb3a6c05.static.com');
+html, body {
+	font-family: 'Merriweather', serif;
+	font-size: 100%;
+	font-weight: 400;
+	height: 100%;
+	line-height: 1.75;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-font-smoothing: antialiased;
+}
+.main-left_Fungus {
+	width: 56%;
+	padding: 12px 0 20px;
+}
+.advertorialText {
+	font-size: 20px;
+	color: black;
+}
+.main-left_Fungus_header {
+	font-size: 22px;
+	background: #000;
+	color: #e0e0e0;
+	padding: 3px 20px;
+	display: inline-block;
+	margin: 15px 0;
+}
+.main-left_Fungus_info {
+	display: flex;
+	justify-content: space-between;
+}
+.sectionContainer {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+h1 {
+	font-size: 2.8rem;
+	letter-spacing: -0.05rem;
+	margin-top: 0;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: 700;
+}
+h2 {
+	font-size: 1.8rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.25rem;
+}
+p {
+	margin: 0 0 1.25rem;
+}
+blockquote, ol, ul, .articleImageContainer {
+	margin: 0 0 20px;
+}
+blockquote {
+	background-color: #eee;
+	border-left: 5px solid #cc0000;
+	font-size: inherit;
+	font-style: italic;
+}
+.faux-button {
+	background: #7dc049;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	outline: none;
+	margin: 5px 0;
+	padding: 8px 25px;
+}
+.footnote {
+	font-size: 0.75rem;
+}
+/*----- Extra Small -----*/
+@media(max-width: 767px) {
+	html, body {
+		background-color: #fff;
+	}
+	.sectionContainer {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	h1 {
+		font-size: 1.8rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1.25rem;
+	}
+	h4 {
+		font-size: 1.15rem;
+	}
+}
+/*---------------------------------------- LINKS & BUTTONS ----------------------------------------*/
+a, button {
+	outline: none;
+}
+a {
+	color: #cc0000;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover {
+	color: #990000;
+	text-decoration: none;
+}
+button.cta {
+	background-color: #cc0000;
+	border-radius: 5px;
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	letter-spacing: -0.025em;
+	line-height: 1.8em;
+	margin: 5px 0;
+	min-width: 250px;
+	outline: none;
+	padding: 5px 25px;
+	margin: auto;
+	margin-top: 20px;
+}
+button.cta:hover {
+	background: #990000;
+}
+.outboundLink {
+	cursor: pointer;
+}
+.multiBrandAdvertorial button.cta {
+	width: 100%;
+}
+button.btnBody {
+	background-color: #7dc049;
+	border: none;
+	color: #fff;
+	font-size: 1.15rem;
+	font-weight: 700;
+	margin: 0 8px 8px 0;
+	padding: 10px 5px;
+	width: 100%;
+}
+button.btnBody:hover {
+	background-color: #006699;
+}
+/*----- Extra Small -----*/
+@media(max-width: 767px) {
+	button.cta {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		padding: 10px;
+	}
+	.tapAge button {
+		font-size: 100%;
+	}
+}
+/*---------------------------------------- HEADER ----------------------------------------*/
+header {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	width: 100%;
+	padding-bottom: 12px;
+}
+header .sectionContainer {
+	padding-left: 0;
+	padding-right: 0;
+}
+#advertisement {
+	color: #999;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 0.75rem;
+	margin: 0;
+	text-align: center;
+}
+header .logo {
+	height: 60px;
+	margin-left: 30px;
+	width: 202px;
+}
+/*----- Extra Small -----*/
+@media(max-width: 767px) {
+	header {
+		margin-bottom: 10px;
+	}
+	header .sectionContainer {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	header .logo {
+		height: 34px;
+		margin-left: 0;
+		margin-top: 5px;
+		width: 114px;
+	}
+}
+/*----- Small -----*/
+@media(min-width: 768px) and (max-width: 991px) {
+	header .sectionContainer {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	header .logo {
+		margin-left: 0;
+	}
+}
+/*----- Medium -----*/
+@media(min-width: 992px) and (max-width: 1199px) {
+	header .sectionContainer {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	header .logo {
+		margin-left: 0;
+	}
+}
+/*---------------------------------------- ARTICLE CONTENT ----------------------------------------*/
+.articleContent {
+	border-bottom: 1px solid #000;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	padding-bottom: 75px;
+	padding-top: 20px;
+}
+.articleInfo {
+	color: #999;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 100%;
+	margin-bottom: 15px;
+}
+.sharethis-inline-share-buttons {
+	margin-bottom: 15px;
+}
+.articleAuthor {
+	color: #005dae;
+	font-weight: bold;
+	margin-right: 8px;
+}
+.photoAuthor {
+	height: 40px;
+	margin-right: 12px;
+	width: 40px;
+}
+.viewerLocation {
+	text-transform: uppercase;
+}
+.highlight {
+	background-color: yellow;
+}
+/*----- Extra Small -----*/
+@media(max-width: 767px) {
+	.articleContent {
+		margin-top: 0;
+		padding-top: 10px;
+	}
+	.articleInfo {
+		font-size: 0.85rem;
+	}
+}
+/*----- responsive video  -----*/
+@media (max-width: 800px) {
+	iframe {
+		height: 420px !important;
+	}
+}
+@media (max-width: 600px) {
+	iframe {
+		height: 320px !important;
+	}
+}
+@media (max-width: 420px) {
+	iframe {
+		height: 220px !important;
+	}
+}
+/*---------------------------------------- MULTIBRAND ADVERTORIAL ----------------------------------------*/
+.multiBrandAdvertorial h2 {
+	margin-top: 50px;
+}
+/*---------------------------------------- FOOTER ----------------------------------------*/
+footer {
+	color: #999;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 10px;
+	padding-bottom: 100px;
+	text-align: center;
+}
+footer a {
+	color: #000;
+	font-family: 'Merriweather', serif;
+	font-size: 0.85rem;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #cc0000;
+	text-decoration: none;
+}
+footer ul {
+	margin-bottom: 10px;
+}
+footer .logo {
+	height: 34px;
+	margin-bottom: 25px;
+	width: 117px;
+}
+/*---------------------------------------- SVG MAP ----------------------------------------*/
+.stateText {
+	fill: #FFFFFF;
+	pointer-events: none;
+}
+.stateImage {
+	fill: #F8991D;
+}
+.stateButton {
+	fill: #000;
+}
+.stateImage, .stateButton {
+	cursor: pointer;
+	transition: 0.4s;
+}
+.stateImage:hover, .stateButton:hover {
+	fill: #cc0000;
+}
+/*---------------------------------------- AGE SELECT ----------------------------------------*/
+.containerAge {
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	max-width: 600px;
+}
+.containerAge .buttonAge {
+	background-color: #00a8f2;
+	border: 2px solid #fff;
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.25em;
+	padding: 25px 0;
+	text-align: center;
+}
+.containerAge .buttonAge:hover {
+	background-color: #005cad;
+}
+/*----- Extra Small -----*/
+@media(max-width: 767px) {
+	.containerAge {
+		max-width: 300px;
+	}
+}
+/********** POPOVER STYLES **********/
+.popover {
+	background-color: #fef5c3;
+	color: #666;
+	border: 2px solid #fad611;
+	font-size: 12px;
+	line-height: 1.3em;
+	max-width: 225px;
+	padding: 5px;
+}
+.popover > .arrow {
+	border-width: 12px;
+}
+.popover > .arrow:after {
+	content: "";
+	border-width: 10px;
+}
+.popover.bottom > .arrow {
+	top: -12px;
+	left: 50%;
+	margin-left: -11px;
+	border-top-width: 0;
+	border-bottom-color: #fad611;
+}
+.popover.bottom > .arrow:after {
+	top: 3px;
+	margin-left: -10px;
+	border-top-width: 0;
+	border-bottom-color: #fef5c3;
+}
+/********** END POPOVER STYLES **********/
+.cta {
+	border: 2px solid #015bcd !important;
+	color: #015bcd!important;
+	display: block!important;
+	font-size: 20px;
+	padding: 7px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	margin: 40px auto 0;
+	background-color: #fff !important;
+}
+#one {
+	width: 57%;
+	display: inline-block;
+	border-right: 1px solid #000;
+	padding-right: 5px
+}
+#two {
+	font-weight: 700;
+	font-family: Roboto;
+	font-size: 37px
+}
+#three {
+	width: 39%;
+	display: inline-block;
+	float: right;
+}
+/*----- Extra Small -----*/
+@media(max-width: 767px) {
+	.main-left_Fungus {
+		width: 100%;
+		padding: 12px 0 20px;
+	}
+	#one {
+		width: 100%;
+		display: inline-block;
+		border-right: none;
+		padding-right: 5px;
+	}
+	#three {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+}
+/*----- Small -----*/
+@media(min-width: 768px) and (max-width: 991px) {}
+/*----- Medium -----*/
+@media(min-width: 992px) and (max-width: 1199px) {}
+/*----- Large -----*/
+@media (min-width: 1000px) {}
