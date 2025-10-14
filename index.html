@@ -244,5 +244,84 @@ pintrk('page');
     }
   </script>
 
+
+  <!-- MOBILE-ONLY STICKY CTA (shows after 50% scroll) -->
+<a href="https://go.wisecombo.com/click"
+   id="scrollButton"
+   class="mobile-sticky-btn"
+   data-lasso-id="2235">
+   👉 See How It Works
+</a>
+
+<style>
+  /* Base (hidden) */
+  #scrollButton{
+    position:fixed; left:0; bottom:0; width:100%;
+    background:#2B9A0A; color:#fff; text-align:center;
+    padding:16px; font-size:18px; font-weight:700; text-decoration:none;
+    z-index:99999; box-shadow:0 -2px 10px rgba(0,0,0,.2);
+    opacity:0; transform:translateY(100%); transition:opacity .25s ease, transform .25s ease;
+    pointer-events:none; /* prevent clicks while hidden */
+    display:block; /* force block; we’ll control visibility via opacity/transform + media query */
+  }
+  /* Visible state */
+  #scrollButton.is-visible{
+    opacity:1; transform:translateY(0); pointer-events:auto;
+  }
+  /* Hide on desktop */
+  @media (min-width:769px){
+    #scrollButton{ display:none !important; }
+  }
+</style>
+
+<script>
+(function(){
+  // Run after DOM is ready (covers themes that defer JS)
+  function initStickyCTA(){
+    var btn = document.getElementById('scrollButton');
+    if(!btn) return;
+
+    function updateVisibility(){
+      // mobile-only guard
+      if (window.innerWidth > 768){
+        btn.classList.remove('is-visible');
+        return;
+      }
+
+      var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+      var maxScroll = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      ) - window.innerHeight;
+
+      // Handle very short pages: show after user scrolls a bit OR if content is tiny
+      var percent = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 100;
+
+      if (percent >= 50){
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    }
+
+    // Initial check (in case user reloads mid-page)
+    updateVisibility();
+
+    // Bind events
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    window.addEventListener('resize', updateVisibility);
+    document.addEventListener('readystatechange', function(){
+      if (document.readyState === 'complete') updateVisibility();
+    });
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initStickyCTA);
+  } else {
+    initStickyCTA();
+  }
+})();
+</script>
+
 </body>
 </html>
